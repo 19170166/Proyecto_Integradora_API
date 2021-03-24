@@ -21,3 +21,7 @@ Ws.channel('chat', ({ socket }) => {
 
 Ws.channel('NivelP','NivelPController').middleware(['auth'])
 Ws.channel('NivelS','NivelController').middleware(['auth'])
+
+Ws.channel('Regado','RegadoController').middleware(['auth']);
+
+Ws.channel('SignIn:*','SingInController')

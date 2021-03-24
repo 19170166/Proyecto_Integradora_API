@@ -1,6 +1,6 @@
 'use strict'
 
-class NivelPController {
+class RegarController {
   constructor ({ socket, request }) {
     this.socket = socket
     this.request = request
@@ -10,9 +10,6 @@ class NivelPController {
     this.socket.broadcast('dato',data)
   }
 
-  onOpen(){}
-  
-  onClose(){}
 }
 
-module.exports = NivelPController
+module.exports = RegarController
