@@ -27,7 +27,9 @@
     "@adonisjs/lucid": "^6.2.1",
     "@adonisjs/validator": "^5.0.6",
     "@adonisjs/websocket": "^1.0.12",
+    "adonis-4-mongoose": "^1.0.8",
     "aws-sdk": "^2.869.0",
+    "lucid-mongo": "^3.1.6",
     "mysql": "^2.18.1"
   },
   "devDependencies": {},

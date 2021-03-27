@@ -18,7 +18,9 @@ const providers = [
   '@adonisjs/lucid/providers/LucidProvider',
   '@adonisjs/validator/providers/ValidatorProvider',
   '@adonisjs/websocket/providers/WsProvider',
-  '@adonisjs/drive/providers/DriveProvider'
+  '@adonisjs/drive/providers/DriveProvider',
+  'lucid-mongo/providers/LucidMongoProvider',
+  'adonis-4-mongoose/provider/Mongoose'
 ]
 
 /*
@@ -31,7 +33,8 @@ const providers = [
 |
 */
 const aceProviders = [
-  '@adonisjs/lucid/providers/MigrationsProvider'
+  '@adonisjs/lucid/providers/MigrationsProvider',
+  'lucid-mongo/providers/MigrationsProvider'
 ]
 
 /*
@@ -46,7 +49,9 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {
+  Mongoose: 'Adonis/Addons/AdonisMongoose'
+}
 
 /*
 |--------------------------------------------------------------------------
