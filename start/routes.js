@@ -13,3 +13,6 @@ Route.resource('/Registro','UserController')
           .validator(new Map([
             [['users.store'],['RegistroUser']]
           ]))
+
+Route.post('/LlenarP','RequestController.postPeticionLlenarP').middleware(['authToken'])
+Route.get('/LlenarP/Check','RequestController.checkPeticionLlenarP').middleware(['auth'])

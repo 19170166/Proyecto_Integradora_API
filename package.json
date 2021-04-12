@@ -30,6 +30,7 @@
     "adonis-4-mongoose": "^1.0.8",
     "aws-sdk": "^2.869.0",
     "lucid-mongo": "^3.1.6",
+    "mongoose": "^5.12.3",
     "mysql": "^2.18.1"
   },
   "devDependencies": {},
