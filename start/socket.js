@@ -24,4 +24,7 @@ Ws.channel('NivelS','NivelController').middleware(['auth'])
 
 Ws.channel('Regado','RegadoController').middleware(['auth']);
 
-Ws.channel('SignIn:*','SingInController')
+Ws.channel('SignIn:*','SignInController')
+// Ws.channel('SignIn:*',({socket}) => {
+//   console.log(socket.topic)
+// })
