@@ -27,10 +27,18 @@ class RequestController {
 
     async postPeticionHumedad({request, response}){
         regar = true
+        response.json({
+            data:regar,
+            status:true
+        })
     }
 
     async cancelarPeticionHumedad({request, response}){
         regar = false
+        response.json({
+            data:regar,
+            status:true
+        })
     }
 }
 
