@@ -1,6 +1,6 @@
 'use strict'
 var lastPet = 0
-const regar = false
+var regar = false
 class RequestController {
 
     async postPeticionLlenarP({request,response}) {
