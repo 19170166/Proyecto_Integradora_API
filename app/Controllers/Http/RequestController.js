@@ -1,6 +1,6 @@
 'use strict'
 var lastPet = 0
-var bandera = false
+const regar = false
 class RequestController {
 
     async postPeticionLlenarP({request,response}) {
@@ -13,11 +13,6 @@ class RequestController {
                 data: newPet.valor,
                 status: true
             })
-        }else{
-            response.json({
-                data:null,
-                status: false
-            })
         }
 
     }
@@ -28,6 +23,14 @@ class RequestController {
             status:true
         })
 
+    }
+
+    async postPeticionHumedad({request, response}){
+        regar = true
+    }
+
+    async cancelarPeticionHumedad({request, response}){
+        regar = false
     }
 }
 
