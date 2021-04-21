@@ -19,3 +19,4 @@ Route.get('/LlenarP/Check','RequestController.checkPeticionLlenarP').middleware(
 
 Route.post('/Regado/Encendido','RequestController.postPeticionHumedad').middleware(['auth'])
 Route.post('/Regado/Apagado','RequestController.cancelarPeticionHumedad').middleware(['auth'])
+Route.get('/Regado/Check','RequestController.checkPeticionRegado').middleware(['auth'])
