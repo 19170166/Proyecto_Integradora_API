@@ -40,6 +40,13 @@ class RequestController {
             status:true
         })
     }
+
+    async checkPeticionRegado({request, response}){
+        response.json({
+            data:regar,
+            status:true
+        })
+    }
 }
 
 module.exports = RequestController
