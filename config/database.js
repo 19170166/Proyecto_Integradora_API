@@ -85,12 +85,15 @@ module.exports = {
     client: 'mongodb',
     connectionString: Env.get('DB_CONNECTION_STRING', ''),
     connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      port: Env.get('DB_PORT', 27017),
-      username: Env.get('DB_USER', 'admin'),
+      host: Env.get('DB_HOST', ''),
+      port: Env.get('DB_PORT',),
+      username: Env.get('DB_USER', ''),
       password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis'),
+      database: Env.get('DB_DATABASE', ''),
       options: {
+        ssl: Env.get('DB_SSL',''),
+        readPreference: Env.get('DB_READ_PREFERENCE','secondary'),
+        authSource: Env.get('DB_AUTH_SOURCE','')
       }
     }
   }
