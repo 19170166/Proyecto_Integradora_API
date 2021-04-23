@@ -1,5 +1,6 @@
 'use strict'
 
+const User = use('App/Models/User')
 class AuthController {
    async Login ({request, response, auth})
    {
@@ -7,7 +8,11 @@ class AuthController {
        const {email, password} = request.only(['email','password'])
        //Generar token del Usuario
        const token = await auth.attempt(email, password)
-       return response.ok(token)
+       const user = await User.findBy('email',email)
+       response.json({
+           token: token,
+           user: user
+       })
    }
 }
 module.exports = AuthController

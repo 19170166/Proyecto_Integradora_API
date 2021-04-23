@@ -1,28 +1,36 @@
 'use strict'
-var lastPet = 0
+var llenar = false
+var valorpeticion = 0
 var regar = false
 class RequestController {
 
     async postPeticionLlenarP({request,response}) {
-        const newPet = request.only(['valor'])
-        
-        if(newPet.valor != lastPet){
-            lastPet = newPet.valor
-            response.json({
-                last: lastPet,
-                data: newPet.valor,
-                status: true
-            })
-        }
+        valorpeticion = request.only(['valor'])
+        llenar = true
+        response.json({
+            data: valorpeticion.valor,
+            llenar:llenar,
+            status: true
+        })
 
     }
 
     async checkPeticionLlenarP({request, response}){
         response.json({
-            data:lastPet,
+            data:valorpeticion.valor,
+            llenar:llenar,
             status:true
         })
 
+    }
+
+    async cancelPeticionLlenarP({request, response}){
+        llenar = false
+        response.json({
+            data:valorpeticion.valor,
+            llenar:llenar,
+            status:false
+        })
     }
 
     async postPeticionHumedad({request, response}){
