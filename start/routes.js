@@ -16,6 +16,7 @@ Route.resource('/Registro','UserController')
 
 Route.post('/LlenarP','RequestController.postPeticionLlenarP').middleware(['authToken'])
 Route.get('/LlenarP/Check','RequestController.checkPeticionLlenarP').middleware(['auth'])
+Route.post('/LlenarP/Cancel','RequestController.cancelPeticionLlenarP').middleware(['authToken'])
 
 Route.post('/Regado/Encendido','RequestController.postPeticionHumedad').middleware(['auth'])
 Route.post('/Regado/Apagado','RequestController.cancelarPeticionHumedad').middleware(['auth'])
