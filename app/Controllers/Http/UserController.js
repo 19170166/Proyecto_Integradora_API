@@ -11,14 +11,12 @@ class UserController {
         
         if(await User.findBy('email',userData.email)){
             return response.created({
-                status: false,
-                data: null
+                status: false
             })
         }else{
             const user = await User.create(userData)
             return response.created({
-                status: true,
-                data: user
+                status: true
             })
         }
         //const mongoosed = await mongoose.create(userData)
