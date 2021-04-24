@@ -11,7 +11,7 @@ class AuthController {
        const user = await User.findBy('email',email)
        response.json({
            token: token,
-           user: user
+           user: user.Nombre
        })
    }
 }
