@@ -10,9 +10,9 @@ class AuthController {
        const token = await auth.attempt(email, password)
        const user = await User.findBy('email',email)
        response.json({
-           token: token,
-           nombre: user.Nombre
-       })
+           nombre: user.Nombre,
+           token: token.token
+        })
    }
 }
 module.exports = AuthController
